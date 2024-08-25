@@ -62,7 +62,8 @@ class Effect {
     this.width = width
     this.height = height
     this.particles = []
-    this.numberOfParticles = 2000
+    // this.numberOfParticles = 2000
+    this.numberOfParticles = 300
     this.cellSize = 20
     this.rows
     this.cols
