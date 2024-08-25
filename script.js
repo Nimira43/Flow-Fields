@@ -14,7 +14,7 @@ class Particle {
     this.y = Math.floor(Math.random() * this.effect.height)
   }
   draw(context) {
-    context.fillRect(this.x, this.y, 10, 10)
+    context.fillRect(this.x, this.y, 50, 50)
   }
 }
 
@@ -25,6 +25,16 @@ class Effect {
     this.particles = []
   }
   init() {
-    this.particles.push(new Particle())
+    this.particles.push(new Particle(this))
+  }
+  render(context) {
+    this.particles.forEach(particle => {
+      particle.draw(context)
+    })
   }
 }
+
+const effect = new Effect(canvas.width, canvas.height)
+effect.init()
+effect.render(ctx)
+console.log(effect)
