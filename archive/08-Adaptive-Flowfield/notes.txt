@@ -1,0 +1,1 @@
+At this stage by changing the values of numberOfParticles, curve and zoom can result in some spectacular effects.
